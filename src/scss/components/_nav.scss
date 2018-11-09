@@ -1,0 +1,29 @@
+.nav {
+    &__wrapper {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        width:90%;
+        max-width:1200px;
+        margin:0 auto;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding-top: 30px;
+    }
+    &__links {
+        a {
+            margin-left:20px;
+            display: block;
+            text-align: right;
+            padding-bottom: 20px;
+            font-size: 18px;
+            &.active {
+                font-weight: 600;
+                &::after {
+                    content: '.';
+                }
+            }
+        }
+    }
+}

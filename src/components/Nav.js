@@ -1,0 +1,41 @@
+import React, { Component } from 'react';
+import { Link, Match} from '@reach/router';
+import '../scss/components/_nav.scss';
+import Logo from './Logo';
+
+const NavLink = props => (
+    <Link
+      {...props}
+      getProps={({ isCurrent }) => {
+        // the object returned here is passed to the
+        // anchor element's props
+        return {
+          className:  isCurrent ? 'active' : null
+        };
+      }}
+    />
+  );
+
+class Nav extends Component {
+    render() {
+        return (
+            <nav className="nav__wrapper">
+                <div className="nav__brand">
+                    <Match path={'/about' || '/work'}>
+                        {props => (
+                            props.match &&
+                            <Link to="/">
+                                <Logo/>
+                            </Link>
+                        )}
+                    </Match>
+                </div>
+                <div className="nav__links">
+                    <NavLink to="/about">About</NavLink>
+                </div>
+            </nav>
+        );
+    }
+}
+
+export default Nav;
