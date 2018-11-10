@@ -3,13 +3,16 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;
-        width:90%;
-        max-width:1200px;
         margin:0 auto;
+        width: 90%;
+        max-width: 1200px;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
         padding-top: 30px;
+        @media(min-width: 768px) and (min-height: 600px){
+            height: 10vh;
+        }
     }
     &__links {
         a {
@@ -17,7 +20,12 @@
             display: block;
             text-align: right;
             padding-bottom: 20px;
-            font-size: 18px;
+            font-size: 1em;
+            @media(min-width: 600px) {
+                display: inline;
+                padding-bottom: 0;
+                font-size: 1em;
+            }
             &.active {
                 font-weight: 600;
                 &::after {

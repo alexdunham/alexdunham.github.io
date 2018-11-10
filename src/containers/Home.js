@@ -6,13 +6,12 @@ import Logo from '../components/Logo';
 class Home extends Component {
     render() {
         return (
-
-                <div className="home__center">
-                    <Logo/>
-                    <div className="home__tagline">
-                        <p>Front end developer</p>
-                    </div>
+            <div className="home__center">
+                <Logo/>
+                <div className="home__tagline">
+                    <p>Front end developer</p>
                 </div>
+            </div>
         );
     }
 }

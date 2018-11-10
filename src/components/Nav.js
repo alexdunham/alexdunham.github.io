@@ -5,33 +5,37 @@ import Logo from './Logo';
 
 const NavLink = props => (
     <Link
-      {...props}
-      getProps={({ isCurrent }) => {
-        // the object returned here is passed to the
-        // anchor element's props
-        return {
-          className:  isCurrent ? 'active' : null
-        };
-      }}
+        {...props}
+        getProps={({ isCurrent }) => {
+            // the object returned here is passed to the
+            // anchor element's props
+            return {
+            className:  isCurrent ? 'active' : null
+            };
+        }}
     />
-  );
+);
 
 class Nav extends Component {
     render() {
         return (
             <nav className="nav__wrapper">
                 <div className="nav__brand">
-                    <Match path={'/about' || '/work'}>
-                        {props => (
-                            props.match &&
-                            <Link to="/">
-                                <Logo/>
-                            </Link>
-                        )}
+                    <Match path="/">
+                        {props =>
+                            props.match ? (
+                                null
+                            ) : (
+                                <Link to="/" className="nav__logo--link">
+                                    <Logo/>
+                                </Link>
+                            )
+                        }
                     </Match>
                 </div>
                 <div className="nav__links">
                     <NavLink to="/about">About</NavLink>
+                    <NavLink to="/work">Work</NavLink>
                 </div>
             </nav>
         );

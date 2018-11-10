@@ -4,19 +4,23 @@ import Home from './containers/Home';
 import About from './containers/About';
 import './scss/main.scss'
 import Nav from './components/Nav';
+import Work from './containers/Work';
+import Footer from './components/Footer';
 
 class App extends Component {
     render() {
         return (
-            <main>
+            <div>
                 <Nav/>
-                <div className="wrapper">
+                <main className="wrapper">
                     <Router>
                         <Home path="/"/>
                         <About path="/about"/>
+                        <Work path="/work"/>
                     </Router>
-                </div>
-            </main>
+                </main>
+                <Footer/>
+            </div>
         );
     }
 }
