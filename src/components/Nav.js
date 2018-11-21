@@ -26,7 +26,7 @@ class Nav extends Component {
                             props.match ? (
                                 null
                             ) : (
-                                <Link to="/" className="nav__logo--link">
+                                <Link to={`${process.env.PUBLIC_URL}/`} className="nav__logo--link">
                                     <Logo/>
                                 </Link>
                             )
@@ -34,8 +34,8 @@ class Nav extends Component {
                     </Match>
                 </div>
                 <div className="nav__links">
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/work">Work</NavLink>
+                    <NavLink to={`${process.env.PUBLIC_URL}/about`}>About</NavLink>
+                    <NavLink to={`${process.env.PUBLIC_URL}/work`}>Work</NavLink>
                 </div>
             </nav>
         );
