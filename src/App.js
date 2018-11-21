@@ -15,7 +15,7 @@ class App extends Component {
                 <main className="wrapper">
                     <Router>
                         <Home path={`${process.env.PUBLIC_URL}/`}/>
-                        <About ppath={`${process.env.PUBLIC_URL}/about`}/>
+                        <About path={`${process.env.PUBLIC_URL}/about`}/>
                         <Work path={`${process.env.PUBLIC_URL}/work`}/>
                     </Router>
                 </main>
