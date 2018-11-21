@@ -1,5 +1,4 @@
 #!/bin/bash
-cp CNAME ./public
 git add .
 git commit -m "deploy commit"
 git push origin HEAD
