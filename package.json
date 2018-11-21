@@ -43,6 +43,7 @@
     "build:dev": "webpack --config webpack.config.js",
     "watch": "webpack --watch",
     "build:prod": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "deploy": "npm run build:prod && ./scripts/deploy-to-gh.sh"
   }
 }
