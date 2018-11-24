@@ -14,9 +14,9 @@ class App extends Component {
                 <Nav/>
                 <main className="wrapper">
                     <Router>
-                        <Home path="/"/>
-                        <About path="/about"/>
-                        <Work path="/work"/>
+                        <Home path={process.env.PUBLIC_URL + "/"}/>
+                        <About path={process.env.PUBLIC_URL + "/about"}/>
+                        <Work path={process.env.PUBLIC_URL + "/work"}/>
                     </Router>
                 </main>
                 <Footer/>
