@@ -9,7 +9,7 @@ class Footer extends Component {
                 <div className="footer__inner">
                     <a href="mailto:alexandracdunham@gmail.com">e: alexandracdunham@gmail.com</a>
                     <a href="tel:07511637352" className="text-center">p: 07511 637 352</a>
-                    <a href="https://www.linkedin.com/in/alexandra-dunham-2a581493/" className="text-right" target="blank">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/alex-dunham/" className="text-right" target="blank">Linkedin</a>
                 </div>
             </footer>
         );
