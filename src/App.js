@@ -12,7 +12,7 @@ import {
     Router
   } from "@reach/router"
   
-  let source = createMemorySource("/starting/url")
+  let source = createMemorySource("https://alexdunham.github.io")
   let history = createHistory(source)
 
 class App extends Component {
