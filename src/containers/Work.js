@@ -61,7 +61,7 @@ class Work extends Component {
         return (
             <div>
                 <h1>Work</h1>
-                <p>NB: Much of the work I do in my current role is not permitted to be shown on this website, for reasons of confidentiality. If you would like to know further details about the kind of projects I have worked on, particularly React-based projects (as this is the technology I have been primarily working with since December 2017).</p>
+                <p>NB: Much of the work I do in my current role is not permitted to be shown on this website, for reasons of confidentiality. If you would like to know further details about the kind of projects I have worked on, particularly React-based projects (as this is the technology I have been primarily working with since December 2017), please get in contact with me.</p>
                 <div className="work__wrap">
                     {
                         projects.map((project, i) => {
