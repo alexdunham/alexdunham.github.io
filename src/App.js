@@ -6,13 +6,13 @@ import Nav from './components/Nav';
 import Work from './containers/Work';
 import Footer from './components/Footer';
 import {
-    createMemorySource,
     createHistory,
     LocationProvider,
     Router
-  } from "@reach/router"
+  } from "@reach/router";
+  import createHashSource from 'hash-source'
   
-  let source = createMemorySource("/")
+  let source = createHashSource();
   let history = createHistory(source)
 
 class App extends Component {
